@@ -1,7 +1,7 @@
 import discord
 from discord.ext import tasks
-import no_git_token
-import src.Message
+from no_git_token import TOKEN
+from src.Message import choice_Message
 
 
 class Client(discord.Client):
@@ -10,12 +10,12 @@ class Client(discord.Client):
         super().__init__()
 
     def run(self):
-        TOKEN = no_git_token.TOKEN
+        TOKEN
         super().run(TOKEN)
 
     async def on_ready(self):
         print("bot起動なのだ！")
 
     async def on_message(self, message: discord.Message):
-        await src.Message.choice_Message(message)
+        await choice_Message(message)
 
