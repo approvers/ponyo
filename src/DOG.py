@@ -22,12 +22,12 @@ DOG_LIST = ["わん！",
 
 # ファイルの中の画像名取得
 FILES_NAME = "pic/DOG"
-files = os.listdir(files_name)
-DOG_jpg = [f for f in files if os.path.isfile(os.path.join(files_name, f))]
+files = os.listdir(FILES_NAME)
+DOG_jpg = [f for f in files if os.path.isfile(os.path.join(FILES_NAME, f))]
 
 
 # Messageを送信！！！
 async def send_DOG(message):
-    await message.channel.send(random.choice(DOG_list))
-    dog_file = discord.File('pic/DOG/%s' % random.choice(DOG_jpg))
-    await message.channel.send(file=dog_file)
+    await message.channel.send(random.choice(DOG_LIST))
+    DOG_file_name = discord.File('pic/DOG/%s' % random.choice(DOG_jpg))
+    await message.channel.send(file = DOG_file_name)

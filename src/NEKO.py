@@ -22,12 +22,12 @@ NEKO_LIST = ["にゃん",
 
 # ファイルの中の画像名取得
 FILES_NAME = "pic/NEKO"
-files = os.listdir(files_name)
-NEKO_jpg = [f for f in files if os.path.isfile(os.path.join(files_name, f))]
+files = os.listdir(FILES_NAME)
+NEKO_jpg = [f for f in files if os.path.isfile(os.path.join(FILES_NAME, f))]
 
 
 # Messageを送信！！！
 async def send_neko(message):
-    await message.channel.send(random.choice(NEKO_list))
-    neko_file = discord.File('pic/NEKO/%s' % random.choice(NEKO_jpg))
-    await message.channel.send(file = neko_file)
+    await message.channel.send(random.choice(NEKO_LIST))
+    NEKO_file_name = discord.File('pic/NEKO/%s' % random.choice(NEKO_jpg))
+    await message.channel.send(file=NEKO_file_name)
