@@ -1,6 +1,6 @@
 import os
-import discord
 import random
+import discord
 
 DOG_list = ["わん！",
             "わおーーん",

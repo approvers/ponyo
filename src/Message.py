@@ -1,6 +1,6 @@
 import src.NEKO
-import src.command
 import src.DOG
+import src.command
 
 
 async def choice_Message(message):

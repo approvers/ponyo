@@ -1,6 +1,6 @@
 import discord
-import no_git_token
 from discord.ext import tasks
+import no_git_token
 import src.Message
 
 
@@ -18,3 +18,4 @@ class Client(discord.Client):
 
     async def on_message(self, message: discord.Message):
         await src.Message.choice_Message(message)
+
