@@ -2,7 +2,7 @@ import os
 import random
 import discord
 
-DOG_list = ["わん！",
+DOG_LIST = ["わん！",
             "わおーーん",
             "わんわん！",
             "わん！！！",

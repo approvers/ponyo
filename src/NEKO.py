@@ -2,7 +2,7 @@ import os
 import random
 import discord
 
-NEKO_list = ["にゃん",
+NEKO_LIST = ["にゃん",
              "にゃおーん",
              "にゃんにゃん",
              "にゃん.....",
