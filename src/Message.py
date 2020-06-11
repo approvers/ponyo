@@ -9,10 +9,10 @@ async def choice_Message(message):
         return
 
     # Messageの内容
-    message_main = message.content
+    content = message.content
 
-    if message_main in src.command.message_list_NEKO:
+    if content in src.command.message_list_NEKO:
         await send_neko(message)
 
-    if message_main in src.command.message_list_DOG:
+    if content in src.command.message_list_DOG:
         await src.DOG.send_DOG(message)
