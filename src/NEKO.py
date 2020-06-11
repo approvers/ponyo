@@ -2,7 +2,7 @@ import os
 import random
 import discord
 
-NEKO_list = ["にゃん",
+NEKO_LIST = ["にゃん",
              "にゃおーん",
              "にゃんにゃん",
              "にゃん.....",
@@ -28,6 +28,6 @@ NEKO_jpg = [f for f in files if os.path.isfile(os.path.join(files_name, f))]
 
 # Messageを送信！！！
 async def send_neko(message):
-    await message.channel.send(random.choice(NEKO_list))
+    await message.channel.send(random.choice(NEKO_LIST))
     neko_file = discord.File('pic/NEKO/%s' % random.choice(NEKO_jpg))
     await message.channel.send(file = neko_file)

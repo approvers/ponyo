@@ -2,7 +2,7 @@ import os
 import random
 import discord
 
-DOG_list = ["わん！",
+DOG_LIST = ["わん！",
             "わおーーん",
             "わんわん！",
             "わん！！！",
@@ -28,6 +28,6 @@ DOG_jpg = [f for f in files if os.path.isfile(os.path.join(files_name, f))]
 
 # Messageを送信！！！
 async def send_DOG(message):
-    await message.channel.send(random.choice(DOG_list))
+    await message.channel.send(random.choice(DOG_LIST))
     dog_file = discord.File('pic/DOG/%s' % random.choice(DOG_jpg))
     await message.channel.send(file=dog_file)
