@@ -21,7 +21,7 @@ DOG_LIST = ["わん！",
             "わん❤"]
 
 # ファイルの中の画像名取得
-files_name = "pic/DOG"
+FILES_NAME = "pic/DOG"
 files = os.listdir(files_name)
 DOG_jpg = [f for f in files if os.path.isfile(os.path.join(files_name, f))]
 

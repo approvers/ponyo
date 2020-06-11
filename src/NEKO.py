@@ -21,7 +21,7 @@ NEKO_LIST = ["にゃん",
              "にゃーおーーーん"]
 
 # ファイルの中の画像名取得
-files_name = "pic/NEKO"
+FILES_NAME = "pic/NEKO"
 files = os.listdir(files_name)
 NEKO_jpg = [f for f in files if os.path.isfile(os.path.join(files_name, f))]
 
